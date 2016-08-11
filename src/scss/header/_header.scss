@@ -1,0 +1,87 @@
+.top-links {
+    padding-top: 20px;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(300, 300, 300, 0.9);
+    text-align: center;
+
+    .active {
+        border-bottom: 2px solid $main-blue;
+        padding-bottom: 1px;
+    }
+
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 30px 0px 30px;
+    }
+
+    @media (max-width: 768px) {
+        li {
+            padding: 0px 15px 0px 15px;
+        }
+    }
+
+    li > a:hover {
+        color: $main-grey;
+        text-decoration: none;
+    }
+
+    li > a {
+        position: relative;
+        color: $main-grey;
+        text-decoration: none;
+        padding-bottom: 3px;
+
+    }
+
+    li > a:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 0;
+        background: transparent;
+        transition: width .25s ease-in-out, background-color .25s ease-in-out;
+    }
+
+    li > a:hover:after {
+        background: $main-blue;
+        width: 100%;
+    }
+}
+
+.top-icon {
+    padding-top: 20px;
+    position: fixed;
+    z-index: 3;
+    text-align: center;
+
+    li {
+        color: black;
+        list-style-type: none;
+        display: inline-block;
+        transition: color .5s;
+    }
+
+    li:hover {
+        color: $main-blue;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        li {
+            margin-left: 15px;
+        }
+    }
+
+    #notification {
+        position: absolute;
+        background: $main-red;
+        font-size: 10px;
+        top: 13px;
+        color: #fff;
+        border-radius: 11px;
+        width: 14px;
+        margin-left: 10px;
+    }
+}

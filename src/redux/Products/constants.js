@@ -1,0 +1,6 @@
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
+export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
+export const UPDATE_PRODUCTS = 'UPDATE_PRODUCTS';
+export const EDIT_NAME = 'EDIT_NAME';
+export const EDIT_DES = 'EDIT_DES';
+export const UPDATE_CART = 'UPDATE_CART';
