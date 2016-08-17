@@ -10,7 +10,6 @@ export default class Header extends Component {
     }
 
     _renderShoppingBag = () => {
-        console.log(this.props.cart);
         if (this.props.cart !== 0) {
             return (
                 <li>

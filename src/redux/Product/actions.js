@@ -41,9 +41,14 @@ const actions = {
 
     saveProduct: (product) => {
         return (dispatch) => {
-            return axios.put(`http://134.213.113.137:9000/v1/products/${product.id}`, {
+            return axios.put(`http://134.213.113.137:9000/v1/products/${product.id}`,
                 product,
-            }).then(res => {
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            ).then(res => {
                 dispatch(saveProd());
             });
         };
